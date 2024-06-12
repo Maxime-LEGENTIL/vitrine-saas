@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-size: 'Roboto';
+}
+
+nav {
+    font-size: 'Roboto';
+    font-weight: 700;
+}
+
+nav a {
+    color: rgba(216, 216, 216, 0.856);
+}
+
+h1 {
+    font-weight: 700;
+}
+
+p {
+    color: grey;
+    font-weight: 500;
+}
+
+.nav-item {
+    margin-left: 20px; /* Augmenter l'espacement entre les éléments */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+footer p, footer a {
+    color: #6c757d;
+    text-align: left; /* Aligner le texte du footer à gauche */
+}
+
+.icon-placeholder {
+    background-image: url('https://cdn.prod.website-files.com/6469e2294ac68c3d5caea327/649ea8e12229d4d5ec07981f_writing-hand_270d-fe0f.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 2rem 0;
+}
+
+footer .footer-section {
+    margin-bottom: 1rem;
+}
+
+footer .footer-section h5 {
+    margin-bottom: 1rem;
+}
+
+footer p, footer a {
+    color: #6c757d;
+    text-align: left;
+}
+
+.icon-container {
+    height: 100%;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;
+}

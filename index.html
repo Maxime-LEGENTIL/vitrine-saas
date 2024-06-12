@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiboo CRM - Title</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .btn-primary {
+            transition: transform 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(0.95);
+        }
+
+        .icon-placeholder {
+            background-image: url('https://cdn.prod.website-files.com/6469e2294ac68c3d5caea327/649ea8e12229d4d5ec07981f_writing-hand_270d-fe0f.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        footer {
+            background-color: #f8f9fa;
+            padding: 2rem 0;
+        }
+
+        footer .footer-section {
+            margin-bottom: 1rem;
+        }
+
+        footer .footer-section h5 {
+            margin-bottom: 1rem;
+        }
+
+        footer p, footer a {
+            color: #6c757d;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        .icon-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .icon-container i {
+            font-size: 3rem; /* Adjust the size as needed */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white" style="border-bottom: 1px solid #e1dbdb;">
+        <div class="container-xxl">
+            <a class="navbar-brand" href="#"><img src="logo.svg" alt="" style="height: 50px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Accueil</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" aria-haspopup="true" aria-expanded="false">Fonctionnalités</a>
+                        <div class="dropdown-menu" aria-labelledby="featuresDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="col-md-1">
+                                    <i class="fa-solid fa-user-tie"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="fw-bold">Gestion des clients</div>
+                                    <small>Ajoutez et gérez facilement vos clients</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="col-md-1">
+                                    <i class="fa-regular fa-paper-plane"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="fw-bold">Gestion des commandes</div>
+                                    <small>Ajoutez et gérez facilement vos commandes</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="col-md-1">
+                                    <i class="fa-solid fa-file-invoice"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="fw-bold">Création de factures</div>
+                                    <small>Générez des factures en un clic</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="featuresDropdown" role="button" aria-haspopup="true" aria-expanded="false">Fonctionnalités</a>
+                        <div class="dropdown-menu" aria-labelledby="featuresDropdown">
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="col-md-1">
+                                    <i class="fa-solid fa-sack-dollar me-2"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="fw-bold">Hiboo Starter</div>
+                                    <small>L'offre basique à partir de 9.99€/mois</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="col-md-1">
+                                    <i class="fa-solid fa-chess me-2"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="fw-bold">Hiboo Gold</div>
+                                    <small>L'offre gold à partir de 19.99€/mois</small>
+                                </div>
+                            </a>
+                            <a class="dropdown-item d-flex align-items-center" href="#">
+                                <div class="col-md-1">
+                                    <i class="fa-solid fa-glasses me-2"></i>
+                                </div>
+                                <div class="col-md-11">
+                                    <div class="fw-bold">Hiboo Platinium</div>
+                                    <small>L'offre ultime à partir de 39.99€/mois</small>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <button class="btn btn-primary px-4 py-2 rounded-pill" style="background-color: #FF4F01; border: none">Essayer gratuitement</button>
+        </div>
+    </nav>
+    
+    <section class="container text-center pt-5">
+        <h1>Outil de commandes et facturations en deux clics 🚀</h1>
+        <p class='pt-1'>Créez vos commandes et générez en un instant un devis et une facture de vos produits pour vos clients !</p>
+        <button class="btn btn-primary px-4 py-2 rounded-pill" style="background-color: #FF4F01; border: none">Essayer gratuitement</button>
+
+        <div class="d-flex justify-content-center align-items-center pt-3">
+            <div class="me-2" style="color: rgb(209, 181, 22)">
+                ★★★★★
+            </div>
+            <div style="color: grey; font-weight: bold;">
+                4.9 out of 5
+            </div>
+        </div>
+        <p class="pt-2">adorés par les utilisateurs</p>
+        
+        <div class='pt-5'>
+            <img src="header.png" alt="" style='height: 500px; border-radius: 20px;'>
+        </div>
+    </section>
+
+    <section class="container text-center pt-5">
+        <h1>Avantages de Hiboo CRM</h1>
+        <p class='pt-1'>Économisez du temps et de l'argent, faîtes des factures en un temps record et de manière professionnelle.</p>
+    
+        <div class="row pt-3">
+            <div class="col-md-6 d-flex mb-3">
+                <div class="row bg-light rounded-3 shadow p-3 w-100">
+                    <div class="col-md-3 icon-container">
+                        <i class="fa-regular fa-paper-plane"></i>
+                    </div>
+                    <div class="col-md-9 text-start content-container">
+                        <div>
+                            <h5>Gestion des commandes</h5>
+                            <p>Ajoutez des produits ainsi que leur quantité à une commande et générez automatiquement un PDF de devis/facture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="row bg-light rounded-3 shadow p-3 w-100">
+                    <div class="col-md-3 icon-container">
+                        <i class="fa-solid fa-file-invoice"></i>
+                    </div>
+                    <div class="col-md-9 text-start content-container">
+                        <div>
+                            <h5>Création de factures</h5>
+                            <p>Générez des factures et des devis en un clin d'œil pour vos produits et services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="row bg-light rounded-3 shadow p-3 w-100">
+                    <div class="col-md-3 icon-container">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <div class="col-md-9 text-start content-container">
+                        <div>
+                            <h5>Gestion des clients</h5>
+                            <p>Suivez facilement vos clients, leurs commandes et leur historique de facturation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="row bg-light rounded-3 shadow p-3 w-100">
+                    <div class="col-md-3 icon-container">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <div class="col-md-9 text-start content-container">
+                        <div>
+                            <h5>Analyses et rapports</h5>
+                            <p>Générez des rapports détaillés pour suivre vos performances et optimiser votre gestion.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="row bg-light rounded-3 shadow p-3 w-100">
+                    <div class="col-md-3 icon-container">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <div class="col-md-9 text-start content-container">
+                        <div>
+                            <h5>Gain de temps énorme</h5>
+                            <p>Automatisez vos tâches répétitives et gagnez un temps précieux pour vous concentrer sur l'essentiel.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex mb-3">
+                <div class="row bg-light rounded-3 shadow p-3 w-100">
+                    <div class="col-md-3 icon-container">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+                    <div class="col-md-9 text-start content-container">
+                        <div>
+                            <h5>Support client</h5>
+                            <p>Profitez d'un support client réactif pour répondre à toutes vos questions et vous aider en cas de besoin.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class='mt-3'>
+            <button class="btn btn-primary px-4 py-2 rounded-pill" style="background-color: #FF4F01; border: none">Essayer gratuitement</button>
+        </div>
+    </section>
+
+    <footer class="text-center mt-5">
+        <div class="container">
+            <div class="row footer-section">
+                <div class="col-md-4 text-start">
+                    <h5>Hiboo CRM 🚀</h5>
+                    <p>Hiboo CRM est le meilleur outil pour gérer vos clients, vos commandes et vos factures. Optimisez votre temps et de l'argent, ne passez plus à côté d'un outil comme celui-ci !</p>
+                </div>
+                <div class="col-md-4 text-start">
+                    <h5>Navigation</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="#">Fonctionnalités</a></li>
+                        <li><a href="#">Tarifs</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 text-start">
+                    <h5>Fonctionnalités 🔥</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Gestion des commandes</a></li>
+                        <li><a href="#">Gestion des clients</a></li>
+                        <li><a href="#">Gain de temps</a></li>
+                        <li><a href="#">Gestion des factures</a></li>
+                        <li><a href="#">Analyses et rapports</a></li>
+                        <li><a href="#">Support client</a></li>
+                    </ul>
+                </div>
+                <!--<div class="col-md-3 text-start">
+                    <h5>Alternatives</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Captions</a></li>
+                        <li><a href="#">Opus Clip</a></li>
+                        <li><a href="#">Zubtitle</a></li>
+                        <li><a href="#">Vidyo</a></li>
+                        <li><a href="#">Veed</a></li>
+                        <li><a href="#">Capcut</a></li>
+                        <li><a href="#">Pictory</a></li>
+                    </ul>
+                </div>-->
+            </div>
+            <div class="row">
+                <hr>
+                <div class="col-12">
+                    <p class='text-center'>Réalisé avec 🧡 par Maxime LE GENTIL - © Copyright 2024 Hiboo CRM</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGz1HoTwBp1HvrG1WmZP7tnDk8qab8I4QN9pFN3a9gCIM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-qZY6BqXJiiggqRErf+lhOJ9jEhtIEXjjXR0zTZvkuw3KZ2ztC+I2L5XzTQF7b2MX" crossorigin="anonymous"></script>
+</body>
+</html>
