@@ -70,3 +70,23 @@ footer p, footer a {
     display: flex;
     align-items: center;
 }
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+}
+.carousel-indicators button {
+    background-color: black;
+}
+.advantage-card {
+    transition: transform 0.3s ease;
+}
+
+.advantage-card:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.orange {
+    color: #FF4F01;
+}
